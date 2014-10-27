@@ -11,14 +11,13 @@ namespace Mermaid.Loft.Infrastructure.WebHttps
     public class WebHttpsUtil
     {
         
-        public string Reponse(string url)
+        public static string Reponse(string url)
         {
             string result = string.Empty;
             using (var webClient = new WebClient())
             {
-                var stream = webClient.OpenRead(url);
-                var streamReader = new StreamReader(stream);
-                result = streamReader.ReadToEnd();
+                var resultByte = webClient.DownloadData(url);
+                result = ASCIIEncoding.UTF8.GetString(resultByte);
             }
             return result;
         }
