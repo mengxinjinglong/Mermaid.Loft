@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.ConsoleDemo", "Mermaid.Loft.Console\Mermaid.Loft.ConsoleDemo.csproj", "{4243E923-C785-454C-B7BE-BDD866050D74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure", "Mermaid.Loft.Infrastructure\Mermaid.Loft.Infrastructure.csproj", "{1D3FF400-D7B7-48D9-97DE-A3144F65CE0E}"
