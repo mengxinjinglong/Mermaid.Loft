@@ -16,8 +16,16 @@ namespace Mermaid.Loft.ConsoleDemo
             foreach (var item in source.Matches(@"\w@"))
                 Console.WriteLine("the result is :" + item);
 
-            var content = WebHttpsUtil.Reponse("http://www.baidu.com");
-            Console.WriteLine(content.Match(@"<input\sid="));
+            var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/40710964384.html");
+            //var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/41072925730.html");
+            //var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/40843319449.html");
+            Console.WriteLine(content.Match("<h1 class=\"d-title\">[\\s\\S]*</h1>"));
+
+            var matches = content.Matches("<span class=\"text text-single-line\">[\\s\\S]{0,20}</span>");
+            foreach (var match in matches)
+            {
+                Console.WriteLine(match);
+            }
             Console.ReadLine();
         }
     }
