@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.ConsoleDemo", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure", "Mermaid.Loft.Infrastructure\Mermaid.Loft.Infrastructure.csproj", "{1D3FF400-D7B7-48D9-97DE-A3144F65CE0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Repositories", "Mermaid.Loft.Infrastructure.Repositories\Mermaid.Loft.Infrastructure.Repositories.csproj", "{09933211-0983-42A3-8B82-C00A44A68321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Model", "Mermaid.Loft.Model\Mermaid.Loft.Model.csproj", "{00B35F88-2E67-4B7C-A837-18F60ADF3613}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1D3FF400-D7B7-48D9-97DE-A3144F65CE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D3FF400-D7B7-48D9-97DE-A3144F65CE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D3FF400-D7B7-48D9-97DE-A3144F65CE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09933211-0983-42A3-8B82-C00A44A68321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09933211-0983-42A3-8B82-C00A44A68321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09933211-0983-42A3-8B82-C00A44A68321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09933211-0983-42A3-8B82-C00A44A68321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
