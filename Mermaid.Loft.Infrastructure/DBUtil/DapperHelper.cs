@@ -20,7 +20,7 @@ namespace Mermaid.Loft.Infrastructure.DBUtil
             
         }
 
-        public DbConnection GetConnection()
+        public DbConnection OpenConnection()
         {
             var sqliteConnection = new SQLiteConnection(CONNECTION);
             sqliteConnection.Open();
