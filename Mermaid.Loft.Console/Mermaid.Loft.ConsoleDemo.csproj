@@ -48,9 +48,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mermaid.Loft.Infrastructure.Repositories\Mermaid.Loft.Infrastructure.Repositories.csproj">
+      <Project>{09933211-0983-42a3-8b82-c00a44a68321}</Project>
+      <Name>Mermaid.Loft.Infrastructure.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mermaid.Loft.Infrastructure\Mermaid.Loft.Infrastructure.csproj">
       <Project>{1d3ff400-d7b7-48d9-97de-a3144f65ce0e}</Project>
       <Name>Mermaid.Loft.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mermaid.Loft.Model\Mermaid.Loft.Model.csproj">
+      <Project>{00b35f88-2e67-4b7c-a837-18f60adf3613}</Project>
+      <Name>Mermaid.Loft.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

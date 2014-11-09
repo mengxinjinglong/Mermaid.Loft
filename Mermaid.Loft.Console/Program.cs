@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 using Mermaid.Loft.Infrastructure.Regular;
 using Mermaid.Loft.Infrastructure.WebHttps;
 
+using Mermaid.Loft.Infrastructure.Repositories;
+using Mermaid.Loft.Model.Products;
+using Mermaid.Loft.Infrastructure.Repositories.Products;
+
 namespace Mermaid.Loft.ConsoleDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
+            /*
             var source = "---zsd123@sdh@周升东.com===000";
             foreach (var item in source.Matches(@"\w@"))
                 Console.WriteLine("the result is :" + item);
@@ -26,6 +31,9 @@ namespace Mermaid.Loft.ConsoleDemo
             {
                 Console.WriteLine(match);
             }
+             */
+            var repository = new ProductRepository();
+            repository.CreateItem();
             Console.ReadLine();
         }
     }
