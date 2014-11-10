@@ -11,6 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Model", "Mermaid.Loft.Model\Mermaid.Loft.Model.csproj", "{00B35F88-2E67-4B7C-A837-18F60ADF3613}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseInfrastructure", "BaseInfrastructure", "{BC24A506-F277-4D5B-9135-07D135C3D698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Dapper", "Mermaid.Loft.DapperInfrastructure\Mermaid.Loft.Infrastructure.Dapper.csproj", "{86FD91C7-5A92-441E-8381-124787E64A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Autofac", "Mermaid.Loft.AutofacInfrastructure\Mermaid.Loft.Infrastructure.Autofac.csproj", "{4FA386A0-F0A7-493D-AB61-D732C1A29294}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.AutoMapper", "Mermaid.Loft.AutoMapperInfrastructure\Mermaid.Loft.Infrastructure.AutoMapper.csproj", "{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.TestUnit", "Mermaid.Loft.Infrastructure.TestUnit\Mermaid.Loft.Infrastructure.TestUnit.csproj", "{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +43,30 @@ Global
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FD91C7-5A92-441E-8381-124787E64A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FD91C7-5A92-441E-8381-124787E64A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FD91C7-5A92-441E-8381-124787E64A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FD91C7-5A92-441E-8381-124787E64A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86FD91C7-5A92-441E-8381-124787E64A2E} = {BC24A506-F277-4D5B-9135-07D135C3D698}
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294} = {BC24A506-F277-4D5B-9135-07D135C3D698}
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E} = {BC24A506-F277-4D5B-9135-07D135C3D698}
+		{4712BB0C-129F-4F58-86FA-60BFB0E2F2C8} = {BC24A506-F277-4D5B-9135-07D135C3D698}
 	EndGlobalSection
 EndGlobal

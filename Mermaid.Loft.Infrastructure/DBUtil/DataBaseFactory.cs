@@ -7,17 +7,12 @@ using System.Threading.Tasks;
 
 namespace Mermaid.Loft.Infrastructure.DBUtil
 {
-    public interface IRepository<T> where T : EntityBase
+    public class DataBaseFactory<T> where T: EntityBase
     {
-        void Create();
-        void Insert(T t);
-
-        void Update(T t);
-
-        void Delete(T t);
-
-        T SelectBy(object obj);
-
-        IList<T> SelectAll();
+        public RepositoryBase<T> GetInstance(string type)
+        {
+            //return new DapperRepository<T>();
+            return null;
+        }
     }
 }
