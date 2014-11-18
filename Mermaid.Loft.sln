@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.ConsoleDemo", "Mermaid.Loft.Console\Mermaid.Loft.ConsoleDemo.csproj", "{4243E923-C785-454C-B7BE-BDD866050D74}"
 EndProject
@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Repositories", "Mermaid.Loft.Infrastructure.Repositories\Mermaid.Loft.Infrastructure.Repositories.csproj", "{09933211-0983-42A3-8B82-C00A44A68321}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Model", "Mermaid.Loft.Model\Mermaid.Loft.Model.csproj", "{00B35F88-2E67-4B7C-A837-18F60ADF3613}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseInfrastructure", "BaseInfrastructure", "{071BC8BA-99CB-4F62-A6DC-564C1B23B32D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Ioc", "Mermaid.Loft.Infrastructure.Ioc\Mermaid.Loft.Infrastructure.Ioc.csproj", "{713F1038-C74C-4730-BE19-96EC27113F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Mapper", "Mermaid.Loft.Infrastructure.Mapper\Mermaid.Loft.Infrastructure.Mapper.csproj", "{D1CED909-7074-4558-864D-BDBE8A64C57C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.DelegateExtensions", "Mermaid.Loft.Infrastructure.DelegateExtensions\Mermaid.Loft.Infrastructure.DelegateExtensions.csproj", "{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +41,25 @@ Global
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00B35F88-2E67-4B7C-A837-18F60ADF3613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713F1038-C74C-4730-BE19-96EC27113F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713F1038-C74C-4730-BE19-96EC27113F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713F1038-C74C-4730-BE19-96EC27113F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713F1038-C74C-4730-BE19-96EC27113F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1CED909-7074-4558-864D-BDBE8A64C57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1CED909-7074-4558-864D-BDBE8A64C57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1CED909-7074-4558-864D-BDBE8A64C57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1CED909-7074-4558-864D-BDBE8A64C57C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{713F1038-C74C-4730-BE19-96EC27113F6D} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{D1CED909-7074-4558-864D-BDBE8A64C57C} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
 	EndGlobalSection
 EndGlobal
