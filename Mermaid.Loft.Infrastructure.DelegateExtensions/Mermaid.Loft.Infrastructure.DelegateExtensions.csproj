@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09933211-0983-42A3-8B82-C00A44A68321}</ProjectGuid>
+    <ProjectGuid>{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mermaid.Loft.Infrastructure.Repositories</RootNamespace>
-    <AssemblyName>Mermaid.Loft.Infrastructure.Repositories</AssemblyName>
+    <RootNamespace>Mermaid.Loft.Infrastructure.DelegateExtensions</RootNamespace>
+    <AssemblyName>Mermaid.Loft.Infrastructure.DelegateExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,20 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Products\IProductRepository.cs" />
-    <Compile Include="Products\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Mermaid.Loft.Infrastructure\Mermaid.Loft.Infrastructure.csproj">
-      <Project>{1d3ff400-d7b7-48d9-97de-a3144f65ce0e}</Project>
-      <Name>Mermaid.Loft.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mermaid.Loft.Model\Mermaid.Loft.Model.csproj">
-      <Project>{00b35f88-2e67-4b7c-a837-18f60adf3613}</Project>
-      <Name>Mermaid.Loft.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,26 +9,23 @@ using System.Threading.Tasks;
 
 namespace Mermaid.Loft.Infrastructure.Repositories.Products
 {
-    public class ProductRepository : DapperRepository<Product>,IRepository<Product>
+    public class ProductRepository : DapperRepository<Product>,IProductRepository
     {
         public ProductRepository()
         {
-            base.SQL_CREATE = "create table product(ProductId varchar(255),ProductName varchar(255),Url varchar(255),UserId varchar(255),CreateDate datetime,SourceUrl varchar(255),Categories varchar(255),Description varchar(255),UpdateDate datetime)";
+            SQL_TABLE_CREATE = "create table product(ProductId varchar(255),ProductName varchar(255),Url varchar(255),UserId varchar(255),CreateDate datetime,SourceUrl varchar(255),Categories varchar(255),Description varchar(255),UpdateDate datetime)";
 
             SQL_INSERT = "insert into product(ProductId,ProductName,Url,UserId,CreateDate,SourceUrl,Categories,Description,UpdateDate) values(@ProductId,@ProductName,@Url,@UserId,@CreateDate,@SourceUrl,@Categories,@Description,@UpdateDate)";
 
             SQL_UPDATE = "update product set ProductName=@ProductName,Url=@Url,UserId=@UserId,CreateDate=@CreateDate,SourceUrl=@SourceUrl,Categories=@Categories,Description=Description,UpdateDate=@UpdateDate where ProductId=";
 
-            SQL_DELETE = "delete from product where productId=@productId";
+            SQL_DELETE_PHYSICAL = "delete from product where productId=@productId";
 
             SQL_SELECTBY = "select * from product where productId=@productId";
 
             SQL_SELECTALL = "select * from product";
         }
-        public void CreateItem()
-        {
-            base.Create();
-        }
+
         public void InsertItem(Product product)
         {
                 base.Insert(product);
@@ -39,17 +36,22 @@ namespace Mermaid.Loft.Infrastructure.Repositories.Products
                 base.Update(product);
         }
 
-        public void DeleteItem(Product product)
+        public void DeleteItemPhysical(Product product)
         {
-            base.Delete(product);
+            base.DeletePhysical(product);
         }
 
-        public Product SelectByItem(string id)
+        public void DeleteItemLogic(Product product)
         {
-            return base.SelectBy(new {ProductId=id});
+            base.DeleteLogic(product);
         }
 
-        public IList<Product> SelectAllItem()
+        public Product SelectItemBy(object id)
+        {
+            return base.SelectBy(new {ProductId=id.ToString()});
+        }
+
+        public IList<Product> SelectItemAll()
         {
             return base.SelectAll();
         }

@@ -9,6 +9,7 @@ using Mermaid.Loft.Infrastructure.WebHttps;
 using Mermaid.Loft.Infrastructure.Repositories;
 using Mermaid.Loft.Model.Products;
 using Mermaid.Loft.Infrastructure.Repositories.Products;
+using Mermaid.Loft.Infrastructure.Repository;
 
 namespace Mermaid.Loft.ConsoleDemo
 {
@@ -32,8 +33,19 @@ namespace Mermaid.Loft.ConsoleDemo
                 Console.WriteLine(match);
             }
              */
-            var repository = new ProductRepository();
-            repository.CreateItem();
+            IRepository<Product> repository = new ProductRepository();
+            //repository.InsertItem(new Product {
+            //    ProductId=Guid.NewGuid().ToString(),
+            //    ProductName = "mylofter",
+            //    UserId = "lofter",
+            //    Categories="lofter-category",
+            //    Description="this is the test category.",
+            //    CreateDate = DateTime.Now.ToLocalTime(),
+            //    UpdateDate = DateTime.Now.ToLocalTime()
+
+            //});
+            var entity = repository.SelectItemAll();
+            Console.WriteLine("insert into the database finish.");
             Console.ReadLine();
         }
     }
