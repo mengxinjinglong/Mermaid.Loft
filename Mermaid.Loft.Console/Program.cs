@@ -10,6 +10,9 @@ using Mermaid.Loft.Infrastructure.Repositories;
 using Mermaid.Loft.Model.Products;
 using Mermaid.Loft.Infrastructure.Repositories.Products;
 using Mermaid.Loft.Infrastructure.Repository;
+using Mermaid.Loft.Infrastructure.AutoMapper;
+using Autofac;
+using System.Reflection;
 
 namespace Mermaid.Loft.ConsoleDemo
 {
@@ -46,6 +49,9 @@ namespace Mermaid.Loft.ConsoleDemo
             //});
             var entity = repository.SelectItemAll();
             Console.WriteLine("insert into the database finish.");
+            IocMapper.Instance.RegistType(Assembly.GetAssembly(typeof(ProductRepository)));
+            var rep = IocMapper.Instance.Container.Resolve<IRepository<Product>>();
+            
             Console.ReadLine();
         }
     }

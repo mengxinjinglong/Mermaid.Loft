@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.ConsoleDemo", "Mermaid.Loft.Console\Mermaid.Loft.ConsoleDemo.csproj", "{4243E923-C785-454C-B7BE-BDD866050D74}"
 EndProject
@@ -18,8 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Mapper", "Mermaid.Loft.Infrastructure.Mapper\Mermaid.Loft.Infrastructure.Mapper.csproj", "{D1CED909-7074-4558-864D-BDBE8A64C57C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.DelegateExtensions", "Mermaid.Loft.Infrastructure.DelegateExtensions\Mermaid.Loft.Infrastructure.DelegateExtensions.csproj", "{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseInfrastructure (2)", "BaseInfrastructure (2)", "{BC24A506-F277-4D5B-9135-07D135C3D698}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mermaid.Loft.Infrastructure.Dapper", "Mermaid.Loft.DapperInfrastructure\Mermaid.Loft.Infrastructure.Dapper.csproj", "{86FD91C7-5A92-441E-8381-124787E64A2E}"
 EndProject
@@ -67,6 +65,10 @@ Global
 		{86FD91C7-5A92-441E-8381-124787E64A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86FD91C7-5A92-441E-8381-124787E64A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86FD91C7-5A92-441E-8381-124787E64A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,5 +80,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{713F1038-C74C-4730-BE19-96EC27113F6D} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{D1CED909-7074-4558-864D-BDBE8A64C57C} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{A8AB2BFD-73C6-460D-91BF-0B0A3F9F62DC} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{86FD91C7-5A92-441E-8381-124787E64A2E} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{4FA386A0-F0A7-493D-AB61-D732C1A29294} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
+		{48E2F451-87EB-4920-B1E0-F6F6C9EFDD1E} = {071BC8BA-99CB-4F62-A6DC-564C1B23B32D}
 	EndGlobalSection
 EndGlobal
