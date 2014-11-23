@@ -20,22 +20,31 @@ namespace Mermaid.Loft.ConsoleDemo
     {
         static void Main(string[] args)
         {
-            /*
+            
             var source = "---zsd123@sdh@周升东.com===000";
             foreach (var item in source.Matches(@"\w@"))
                 Console.WriteLine("the result is :" + item);
 
-            var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/40710964384.html");
+            //var url = "http://item.taobao.com/item.htm?spm=a1z10.3.w4002-5862495901.24.4dbx9k&id=42271148128";
+            var url = "http://item.taobao.com/item.htm?spm=a1z10.1.w5003-6599201826.13.wVsA6V&id=38210095996&scene=taobao_shop";
+            //"http://detail.1688.com/offer/40710964384.html"
+            var content = WebHttpsUtil.Reponse(url);
             //var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/41072925730.html");
             //var content = WebHttpsUtil.Reponse("http://detail.1688.com/offer/40843319449.html");
-            Console.WriteLine(content.Match("<h1 class=\"d-title\">[\\s\\S]*</h1>"));
+            //var titleMatch = "<h1 class=\"d-title\">[\\s\\S]*</h1>";
+            Console.WriteLine("---------Title--------");
+            var titleMatch = "<h1 class=\"d-title\">[\\s\\S]*</h1>";
+            Console.WriteLine(content.Match(titleMatch));
 
-            var matches = content.Matches("<span class=\"text text-single-line\">[\\s\\S]{0,20}</span>");
+            var colorMatch = "<dl class=\"J_Prop tb-prop tb-clearfix[\\s\\S]{0,900}</dl>";
+            //var colorMatch = "<span class=\"text text-single-line\">[\\s\\S]{0,20}</span>";
+            var matches = content.Matches(colorMatch);
+            Console.WriteLine("---------Color---------");
             foreach (var match in matches)
             {
                 Console.WriteLine(match);
             }
-             */
+             
             IRepository<Product> repository = new ProductRepository();
             //repository.InsertItem(new Product {
             //    ProductId=Guid.NewGuid().ToString(),
@@ -47,11 +56,12 @@ namespace Mermaid.Loft.ConsoleDemo
             //    UpdateDate = DateTime.Now.ToLocalTime()
 
             //});
+            /*
             var entity = repository.SelectItemAll();
             Console.WriteLine("insert into the database finish.");
             IocMapper.Instance.RegistType(Assembly.GetAssembly(typeof(ProductRepository)));
             var rep = IocMapper.Instance.Container.Resolve<IRepository<Product>>();
-            
+            */
             Console.ReadLine();
         }
     }
