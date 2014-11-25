@@ -8,6 +8,7 @@ namespace Mermaid.Loft.Infrastructure.Ioc.BaseRepository
 {
     public interface IRepository<T> where T:class
     {
+        void Create();
         void Insert(T t);
 
         void Update(T t);

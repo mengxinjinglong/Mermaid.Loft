@@ -26,6 +26,11 @@ namespace Mermaid.Loft.Infrastructure.Repositories.Products
             SQL_SELECTALL = "select * from product";
         }
 
+        public void CreateTable()
+        {
+            base.Create();
+        }
+
         public void InsertItem(Product product)
         {
                 base.Insert(product);
