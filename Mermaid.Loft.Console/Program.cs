@@ -75,31 +75,7 @@ namespace Mermaid.Loft.ConsoleDemo
         static void Main(string[] args)
         {
 
-            /*
-            //var url = "http://item.taobao.com/item.htm?spm=a1z10.3.w4002-5862495901.24.4dbx9k&id=42271148128";
-            var url = "http://item.taobao.com/item.htm?spm=a1z10.1.w5003-6599201826.13.wVsA6V&id=38210095996&scene=taobao_shop";
-            //"http://detail.1688.com/offer/40710964384.html"
-            var content = WebHttpsUtil.Reponse(url);
-            Console.WriteLine("---------Title--------");
-            var titleMatch = "<h1 class=\"d-title\">[\\s\\S]*</h1>";
-            Console.WriteLine(content.Match(titleMatch));
-
-            var colorMatch = "<dl class=\"J_Prop tb-prop tb-clearfix[\\s\\S]{0,900}</dl>";
-            //var colorMatch = "<span class=\"text text-single-line\">[\\s\\S]{0,20}</span>";
-            var matches = content.Matches(colorMatch);
-            Console.WriteLine("---------Color---------");
-            
-            foreach (var match in matches)
-            {
-                Console.WriteLine(match);
-            }
-            */
-            IRepository<Product> repository = new ProductRepository();
-            repository.CreateTable();
-            foreach(var item in ProductList)
-            {
-                repository.InsertItem(item);
-            }
+           IRepository<Product> repository = new ProductRepository();
             
             var entity = repository.SelectItemAll();
             /*
@@ -109,6 +85,12 @@ namespace Mermaid.Loft.ConsoleDemo
             */
             Console.ReadLine();
         }
+    }
+
+    class ReglarRule
+    {
+        public const string RULE = "<dl class=\"J_Prop tb-prop tb-clearfix[\\s\\S]{0,900}</dl>";
+        public const string SOURCE_RULE = "<span class=\"text text-single-line\">[\\s\\S]{0,20}</span>";
     }
 
     class UrlMapper

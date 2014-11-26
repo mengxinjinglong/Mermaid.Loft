@@ -44,7 +44,9 @@
     <Compile Include="Products\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mermaid.Loft.Infrastructure\Mermaid.Loft.Infrastructure.csproj">
       <Project>{1d3ff400-d7b7-48d9-97de-a3144f65ce0e}</Project>

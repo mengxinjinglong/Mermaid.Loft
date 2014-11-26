@@ -13,32 +13,31 @@ namespace Mermaid.Loft.Infrastructure.Repositories.Products
     {
         public ProductRepository()
         {
+            TABLE_NAME = "product";
+
             SQL_TABLE_CREATE = "create table product(ProductId varchar(255),ProductName varchar(255),Url varchar(255),UserId varchar(255),CreateDate datetime,SourceUrl varchar(255),Categories varchar(255),Description varchar(255),UpdateDate datetime)";
 
             SQL_INSERT = "insert into product(ProductId,ProductName,Url,UserId,CreateDate,SourceUrl,Categories,Description,UpdateDate) values(@ProductId,@ProductName,@Url,@UserId,@CreateDate,@SourceUrl,@Categories,@Description,@UpdateDate)";
 
             SQL_UPDATE = "update product set ProductName=@ProductName,Url=@Url,UserId=@UserId,CreateDate=@CreateDate,SourceUrl=@SourceUrl,Categories=@Categories,Description=Description,UpdateDate=@UpdateDate where ProductId=";
 
-            SQL_DELETE_PHYSICAL = "delete from product where productId=@productId";
+            SQL_DELETE_PHYSICAL = "delete from product where ProductId=@productId";
 
-            SQL_SELECTBY = "select * from product where productId=@productId";
+            SQL_SELECTBY = "select * from product where ProductId=@productId";
 
             SQL_SELECTALL = "select * from product";
-        }
 
-        public void CreateTable()
-        {
-            base.Create();
+            CheckTable();
         }
 
         public void InsertItem(Product product)
         {
-                base.Insert(product);
+            base.Insert(product);
         }
 
         public void UpdateItem(Product product)
         {
-                base.Update(product);
+            base.Update(product);
         }
 
         public void DeleteItemPhysical(Product product)

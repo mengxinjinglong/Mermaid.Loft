@@ -9,7 +9,6 @@ namespace Mermaid.Loft.Infrastructure.Repository
 {
     public interface IRepository<T> where T : EntityBase
     {
-        void CreateTable();
         void InsertItem(T t);
 
         void UpdateItem(T t);
