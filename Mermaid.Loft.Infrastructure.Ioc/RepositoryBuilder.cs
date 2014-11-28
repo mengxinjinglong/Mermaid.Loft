@@ -13,7 +13,9 @@ namespace Mermaid.Loft.Infrastructure.Ioc
     public class RepositoryBuilder : IRepositoryBuilder
     {
         private static readonly RepositoryBuilder _instance = new RepositoryBuilder();
-        private static readonly ContainerBuilder _container = new ContainerBuilder();
+        private static readonly ContainerBuilder _containerBuilder = new ContainerBuilder();
+
+        private static IContainer _container  = null;
         private RepositoryBuilder() { }
 
         public static RepositoryBuilder Instance { 
@@ -22,17 +24,24 @@ namespace Mermaid.Loft.Infrastructure.Ioc
 
         public void RegisterType<T>() where T:class
         {
-            _container.RegisterType<T>();
+            _containerBuilder.RegisterType<T>();
+        }
+
+        public T GetInstance<T>() where T:class
+        { 
+            return _container.Resolve<T>();
         }
 
         public void Initialize()
-        { 
-            _container.RegisterType<CategoryRepositoryImpl>()
+        {
+            _containerBuilder.RegisterType<CategoryRepositoryImpl>()
                 .As<ICategoryRepository>();
-            _container.RegisterType<ProductRepositoryImpl>()
+            _containerBuilder.RegisterType<ProductRepositoryImpl>()
                 .As<IProductRepository>();
-            _container.RegisterType<UserRepositoryImpl>()
+            _containerBuilder.RegisterType<UserRepositoryImpl>()
                 .As<IUserRepository>();
+
+            _container = _containerBuilder.Build();
         }
     }
 }
