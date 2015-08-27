@@ -13,6 +13,7 @@ using Mermaid.Loft.Infrastructure.Repository;
 using Mermaid.Loft.Infrastructure.AutoMapper;
 using Autofac;
 using System.Reflection;
+using Mermaid.Loft.Infrastructure.Aop.Custom;
 
 namespace Mermaid.Loft.ConsoleDemo
 {
@@ -74,10 +75,14 @@ namespace Mermaid.Loft.ConsoleDemo
         }
         static void Main(string[] args)
         {
-
-           IRepository<Product> repository = new ProductRepository();
-            
-            var entity = repository.SelectItemAll();
+            //new Mermaid.Loft.Infrastructure.Aop.Application().Execute();
+            new Mermaid.Loft.Infrastructure.Autofac.Application().ExecuteEventBus();
+           //IRepository<Product> repository = new ProductRepository();
+           /* MyContextObject myContextObject = new MyContextObject();
+            myContextObject.WriteLine("Test");
+            Console.ReadLine();
+            */
+            //var entity = repository.SelectItemAll();
             /*
             Console.WriteLine("insert into the database finish.");
             IocMapper.Instance.RegistType(Assembly.GetAssembly(typeof(ProductRepository)));

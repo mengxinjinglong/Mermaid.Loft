@@ -8,6 +8,11 @@ namespace Mermaid.Loft.Infrastructure.Ioc.Categories
 {
     public class CategoryRepositoryImpl:ICategoryRepository
     {
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category t)
         {
             throw new NotImplementedException();

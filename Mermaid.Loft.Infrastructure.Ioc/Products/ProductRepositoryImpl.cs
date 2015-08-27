@@ -8,6 +8,11 @@ namespace Mermaid.Loft.Infrastructure.Ioc.Products
 {
     public class ProductRepositoryImpl:IProductRepository
     {
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Product t)
         {
             throw new NotImplementedException();

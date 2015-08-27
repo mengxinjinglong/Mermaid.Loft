@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4FA386A0-F0A7-493D-AB61-D732C1A29294}</ProjectGuid>
+    <ProjectGuid>{48F0636C-F1AE-4F11-ABE3-08D252A14C51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mermaid.Loft.Infrastructure.Autofac</RootNamespace>
-    <AssemblyName>Mermaid.Loft.Infrastructure.Autofac</AssemblyName>
+    <RootNamespace>Mermaid.Loft.Infrastructure.EventHandlers</RootNamespace>
+    <AssemblyName>Mermaid.Loft.Infrastructure.EventHandlers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,18 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
-    <Compile Include="ConsoleLogAdapter.cs" />
-    <Compile Include="Domain\UserDomain.cs" />
-    <Compile Include="EventHandlers\ChangePasswordEventHandler.cs" />
-    <Compile Include="EventHandlers\IEventHandler.cs" />
-    <Compile Include="EventHandlers\LoginEventHandler.cs" />
-    <Compile Include="ILogAdapter.cs" />
-    <Compile Include="MermaidEventBus.cs" />
+    <Compile Include="HandlerManager.cs" />
+    <Compile Include="Handlers\ConsoleHandler.cs" />
+    <Compile Include="Handlers\LogHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Topics\BaseTopic.cs" />
-    <Compile Include="Topics\ChangePasswordTopic.cs" />
-    <Compile Include="Topics\LoginTopic.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -57,6 +57,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mermaid.Loft.Aop\Mermaid.Loft.Infrastructure.Aop.csproj">
+      <Project>{48c1c056-058b-4a95-96dc-7ceaf3b604c3}</Project>
+      <Name>Mermaid.Loft.Infrastructure.Aop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mermaid.Loft.AutofacInfrastructure\Mermaid.Loft.Infrastructure.Autofac.csproj">
+      <Project>{4fa386a0-f0a7-493d-ab61-d732c1a29294}</Project>
+      <Name>Mermaid.Loft.Infrastructure.Autofac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mermaid.Loft.Infrastructure.Repositories\Mermaid.Loft.Infrastructure.Repositories.csproj">
       <Project>{09933211-0983-42a3-8b82-c00a44a68321}</Project>
       <Name>Mermaid.Loft.Infrastructure.Repositories</Name>

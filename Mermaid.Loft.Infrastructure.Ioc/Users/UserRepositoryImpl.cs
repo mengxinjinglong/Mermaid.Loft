@@ -8,6 +8,10 @@ namespace Mermaid.Loft.Infrastructure.Ioc.Users
 {
     public class UserRepositoryImpl:IUserRepository
     {
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Insert(User t)
         {
